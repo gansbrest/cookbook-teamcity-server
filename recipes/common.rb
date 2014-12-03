@@ -9,6 +9,7 @@ user node["teamcity_server"]["user"] do
   gid node["teamcity_server"]["group"]
   home node["teamcity_server"]["root_dir"]
   shell "/bin/bash"
+  not_if "getent passwd #{node["teamcity_server"]["user"]}"
 end
 
 directory node["teamcity_server"]["root_dir"] do
