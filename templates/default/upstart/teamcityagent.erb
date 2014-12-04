@@ -5,5 +5,5 @@ stop on runlevel [06]
 
 script
   export TEAMCITY_DATA_PATH=<%= @data_dir %>
-  exec <%= @root_dir %>/buildAgent/bin/agent.sh run
+  exec su -s /bin/sh -c 'exec "$0" "$@"' <%= @user_name %> -- <%= @root_dir %>/buildAgent/bin/agent.sh run
 end script
