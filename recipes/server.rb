@@ -7,6 +7,7 @@ template "#{node["teamcity_server"]["root_dir"]}/conf/server.xml" do
   variables(
     :address => node["teamcity_server"]["server"]["address"],
     :port    => node["teamcity_server"]["server"]["port"],
+    :protocol => node["teamcity_server"]["server"]["protocol"],
     :path => node["teamcity_server"]["server"]["path"],
     :docbase => node["teamcity_server"]["root_dir"]
   )

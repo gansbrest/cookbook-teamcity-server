@@ -6,6 +6,7 @@ default["teamcity_server"]["build_agent"]["search_query"]       = "role\:teamcit
 default["teamcity_server"]["build_agent"]["server_url"]         = nil
 default["teamcity_server"]["server"]["address"]                 = "0.0.0.0"
 default["teamcity_server"]["server"]["port"]                    = 8111
+default["teamcity_server"]["server"]["protocol"]                = "HTTP/1.1"
 default["teamcity_server"]["root_dir"]                          = "/opt/TeamCity"
 default["teamcity_server"]["logs_dir"]                          = node["teamcity_server"]["root_dir"]+'/logs'
 default["teamcity_server"]["data_dir"]                          = "/opt/.BuildServer"
